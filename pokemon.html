@@ -9,12 +9,16 @@
 </head>
 <body style="font-family: Arial, sans-serif; color: #444444;">
 <h1 align="center">Generate a Pokemon!!!</h1>
-<table align="center" width="500px" style="border: 1px dotted black;">
+<table id="pokemonList" align="center" width="500px" style="border: 1px dotted black; border-collapse: collapse;">
     <tr>
-        <td>
-            <div id="randomButton" width="100%" style="background-color: red; color: white; text-align: center; width: 100%; height: 50px; line-height: 50px; cursor: pointer;">Random Creation</div>
+        <td colspan="3" style="padding: 0;">
+            <div id="randomButton" width="100%"
+                 style="background-color: red; color: white; text-align: center; width: 100%; height: 50px; line-height: 50px; cursor: pointer;">
+                Random Creation
+            </div>
         </td>
     </tr>
+
 </table>
 
 
@@ -27,8 +31,33 @@
 <div id="searchResults">No result</div>
 
 
-<script src ="pok.js">
+<script src="pok.js">
 
 </script>
+<script>
+    $(document).ready(function () {
+        $('#pokemonList').append('' +
+        '<tr>' +
+        '<td width="50%" style="border-right: 1px solid black; padding-left: 6px; vertical-align: top;">' +
+        '<h2>Entei</h2>' +
+        'ID: 244' +
+        '</td>' +
+        '<td>' +
+        '<img height="96px" width="96px" src="244.png" alt=""/>' +
+        '</td>' +
+        '<td>' +
+        '<img id="pokemon244" height="96px" width="96px" src="X.png" alt="" style="cursor: pointer;"/>' +
+        '</td>' +
+        '</tr>' +
+        '');
+        $('#pokemon244').attr('onclick', "deleteRow('pokemon244')");
+    });
+
+    function deleteRow(passTheId) {
+        $('#' + passTheId).parent().parent().remove();
+    }
+
+</script>
+
 </body>
 </html>
