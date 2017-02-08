@@ -62,17 +62,15 @@
         '<img height="96px" width="96px" src="'+ items.front_default  + '"alt=""/>' +
         '</td>' +
         '<td>' +
-        '<img id=\"pokemon'+ enteiID +'\" height="96px" width="96px" src="X.png" alt="" style="cursor: pointer;"/>' +
+        '<img id=\"pokemon'+ enteiID +'\" height="96px" width="96px" src="X.png" onclick=\"deleteRow(\'pokemon'+enteiID+'\')\" alt="" style="cursor: pointer;"/>' +
         '</td>' +
         '</tr>' +
         '');
-        
-          $('#pokemon'+enteiID).attr('onclick', "deleteRow('pokemon244')");
-        
           }
         });
-    
-        function deleteRow(passTheId) {
-        $('#' + passTheId).parent().parent().remove();
-    }
+
     });
+
+   function deleteRow(passTheId) {
+       $('#' + passTheId).parent().parent().remove();
+   }
