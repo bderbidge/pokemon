@@ -27,7 +27,9 @@
  $("#randomButton").click(function (e) {
     
    
-         var value = Math.floor((Math.random() * 721) + 1);
+        var value = Math.floor((Math.random() * 721) + 1);
+        var name;
+        var id;
         // var value = $("#searchStack").val();
         console.log(value);
         e.preventDefault();
@@ -43,8 +45,8 @@
                 var everything;
                 var everyname;
                 
-                var name = parsed_json['name'];
-                var id = parsed_json['id'];
+                 name = parsed_json['name'];
+                 id = parsed_json['id'];
             
           
         
@@ -69,6 +71,7 @@
         
           }
         });
+    
         function deleteRow(passTheId) {
         $('#' + passTheId).parent().parent().remove();
     }
