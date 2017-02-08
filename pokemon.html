@@ -31,33 +31,12 @@
 <div id="searchResults">No result</div>
 
 
-<script src="pok.js">
-
+<script src="./pok.js">
 </script>
 <script>
-    $(document).ready(function () {
-        var enteiID = 224;
-
-        $('#pokemonList').append('' +
-        '<tr>' +
-        '<td width="50%" style="border-right: 1px solid black; padding-left: 6px; vertical-align: top;">' +
-        '<h2>Entei</h2>' +
-        'ID: 244' +
-        '</td>' +
-        '<td>' +
-        '<img height="96px" width="96px" src="244.png" alt=""/>' +
-        '</td>' +
-        '<td>' +
-        '<img id=\"pokemon'+enteiID+'\" height="96px" width="96px" src="X.png" alt="" style="cursor: pointer;"/>' +
-        '</td>' +
-        '</tr>' +
-        '');
-        $('#pokemon244').attr('onclick', "deleteRow('pokemon244')");
-    });
-
-    function deleteRow(passTheId) {
-        $('#' + passTheId).parent().parent().remove();
-    }
+   
+    
+    
 
 </script>
 
